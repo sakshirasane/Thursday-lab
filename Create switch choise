@@ -1,0 +1,27 @@
+import java.util.*;
+class Test{
+  public static void main(String []args)
+{
+   int a;
+Scanner sv=new Scanner(System.in);
+  System.out.println("1. unary operator ");
+  System.out.println("2. binary operator ");
+  System.out.println("3. ternary operator ");
+  System.out.println("please select your choice :");  
+  a=sv.nextInt();
+  switch(a){
+ case 1:
+ System.out.println(" unary operator ");
+ break;
+case 2:
+ System.out.println(" binary operator ");
+ break;
+case 3:
+ System.out.println(" ternary operator ");
+ break;
+default:
+ System.out.println(" please enter valid no ");
+ break;
+}
+}
+}
