@@ -1,0 +1,40 @@
+import java.util.*;
+class Switch{
+ public static void main(String args[]){
+  Scanner Sc=new Scanner(System.in);
+  char ch;
+  ch=Sc.next().charAt(0);
+  switch(ch){
+     case 'a':
+     System.out.println("it is vowel");
+     break;
+     case 'e':
+     System.out.println("it is vowel");
+     break;
+     case 'i':
+     System.out.println("it is vowel");
+     break;
+     case 'o':
+     System.out.println("it is vowel");
+     break;
+     case 'u':
+     System.out.println("it is vowel");
+     break;
+     case 'A':
+     System.out.println("it is vowel");
+     break;
+     case 'E':
+     System.out.println("it is vowel");
+     break;
+     case 'O':
+     System.out.println("it is vowel");
+     break;
+     case 'U':
+     System.out.println("it is vowel");
+     break;
+     case 'I':
+     System.out.println("it is vowel");
+     break;
+    }
+  }
+}
