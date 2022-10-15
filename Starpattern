@@ -1,0 +1,72 @@
+import java.util.*;
+public class Starpattern {
+	Scanner sc=new Scanner(System.in);
+	int r=sc.nextInt();
+void A() {
+	System.out.println("this is word pattern :");
+	int alph=65;
+	for(int i=0;i<=r;i++) {
+		for(int j=0;j<=i;j++) {
+			System.out.print((char)(alph+j)+"");
+		}
+		System.out.println();
+	}
+}
+void B() {
+	System.out.println("this is number pattern :");
+	int i,j;
+	for(i=1;i<=r;i++) {
+		for(j=1;j<=r-i;j++) {
+			System.out.print(" ");
+		}
+		for(j=1;j<=i;j++) {
+			System.out.print(j);
+		}
+		System.out.println();
+	}
+}
+void C() {
+	System.out.println("this is star pattern :");
+	int i,j;
+	for(i=0;i<r;i++) {
+		for(j=r-i;j>1;j--) {
+			System.out.print(" ");
+		}
+		for(j=0;j<=i;j++) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+}
+void D() {
+	System.out.println("this is 0 and 1 pattern :");
+	for(int i=1;i<=r;i++) {
+		int n;
+		if(i%2==0) {
+			n=0;
+			for(int j=1;j<=r;j++) {
+				System.out.print(n);
+				n=(n==0)?1:0;
+			}
+		}
+		else
+		{
+			n=1;
+			for(int j=1;j<=r;j++) {
+				System.out.print(n);
+				n=(n==0)?1:0;
+			
+			}
+		}
+		System.out.println();
+	}
+}
+public static void main(String[] args) {
+	System.out.println("enter the value of row :");
+	Starpattern s=new Starpattern();
+	s.A();
+	s.B();
+	s.C();
+	s.D();
+}
+}
