@@ -1,0 +1,39 @@
+public interface SBI {
+public void sbi();
+}
+public interface UNION {
+public void union();
+}
+public interface LENA_DENA_BANK {
+public void lenadena();
+}
+import java.util.*;
+public class BANK implements SBI,UNION,LENA_DENA_BANK {
+Scanner sc=new Scanner(System.in);
+int rokda=sc.nextInt();
+int year=sc.nextInt();
+	public static void main(String[] args) {
+	System.out.println("enter the ammount and year :");
+	BANK b=new BANK();
+	b.lenadena();
+	b.union();
+	b.sbi();
+}
+public void lenadena() {
+	double r=10;
+	double l=rokda*year*r/100;
+System.out.println("the interest of LENA_DENA_BANK is :"+l);
+}
+public void union() {
+	double r=15;
+	double l=rokda*year*r/100;
+	System.out.println("the interest of UNION is :"+l);
+	
+}
+public void sbi() {
+   double r=20;
+   double l=rokda*year*r/100;
+   System.out.println("the interest of SBI is :"+l);
+}
+}
+
