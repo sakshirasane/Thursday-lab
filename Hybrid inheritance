@@ -1,0 +1,113 @@
+public interface Student_detail {
+public void info();
+}
+public interface Marks_firstSem {
+public void MarkFS(int m);
+}
+public interface marks_secondSem {
+public void secondsem();
+}
+public interface Sports {
+public void sport();
+}
+public interface Total extends Marks_firstSem,marks_secondSem,Sports{
+}
+import java.util.*;
+public class Grade implements Total,Student_detail{
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int a[]= new int[n];
+    int Total=0;
+    int total1=0;
+	public static void main(String[] args) {
+	System.out.println("Enter the Size of Marks :");
+	Grade g=new Grade();
+	g.info();
+	g.MarkFS(5);
+	g.secondsem();
+}
+	@Override
+	public void MarkFS(int m) {
+		System.out.println("Enter the Marks :");
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+			Total+=a[i];
+		}
+		System.out.println("The total of marks is"+Total);
+		double percentage=Total/n;
+		//System.out.println("The percentage is "+per);	
+		System.out.println("The final percentage is "+percentage);
+		double add=percentage+m;
+		System.out.println("The additional Sport Marks: "+add);
+		if(add>=90 && add<=100) {
+			System.out.println("Grade A+");
+		}
+	    else if(add>=80 && add<=89) {
+			System.out.println("Grade A");
+		}
+		else if(add>=70 && add<=79) {
+			System.out.println("Grade B");
+		}
+		else if(add>=60 && add<=69) {
+			System.out.println("Grade C");
+		}
+		else if(add>=50 && add<=59) {
+			System.out.println("Grade D");
+		}
+		else if(add>=35 && add<=49) {
+			System.out.println("Grade E");
+		}
+		else {
+			System.out.println("Fail");
+		}
+}
+
+	@Override
+	public void secondsem() {
+		System.out.println("Enter the Marks :");
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+			total1+=a[i];
+		}
+		System.out.println("The total of marks is "+total1);
+		double percentage=total1/n*100;
+		System.out.println("The percentage is "+percentage);
+System.out.println("The final percentage is "+percentage);
+		if(percentage>=90 && percentage<=100) {
+			System.out.println("Grade A+");
+		}
+	    else if(percentage>=80 && percentage<=89) {
+			System.out.println("Grade A");
+		}
+		else if(percentage>=70 && percentage<=79) {
+			System.out.println("Grade B");
+		}
+		else if(percentage>=60 && percentage<=69) {
+			System.out.println("Grade C");
+		}
+		else if(percentage>=50 && percentage<=59) {
+			System.out.println("Grade D");
+		}
+		else if(percentage>=35 && percentage<=49) {
+			System.out.println("Grade E");
+		}
+		else {
+			System.out.println("Fail");
+		}
+}
+
+	@Override
+	public void sport() {
+		int m=5;
+		MarkFS(m);
+	}
+	@Override
+	public void info() {
+		System.out.println("Enter the Student name :");
+		String name=sc.next();
+		System.out.println("Enter the Student roll no :");
+		int roll_no=sc.nextInt();
+		//System.out.println(name);
+		//System.out.println(roll_no);
+	}
+}
