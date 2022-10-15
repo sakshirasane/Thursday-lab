@@ -1,0 +1,64 @@
+import java.util.*;
+public class Do_While {
+public static void main(String[] args) {
+	int menu,menu1 = 0;
+	char ans;
+	Scanner sc=new Scanner(System.in);
+	do {
+	System.out.println("1.Non veg");
+	System.out.println("2.veg");
+	System.out.println("Please enter your menu :");
+	menu=sc.nextInt();
+	switch(menu) {
+	case 1:
+		System.out.println("chicken lolipop");
+		System.out.println("chicken sup");
+		System.out.println("Chicken haka noodles");
+		System.out.println("please select your menu");
+		menu1=sc.nextInt();
+		break;
+	case 2:	
+		System.out.println(" Rice plate");
+		System.out.println("veg pulav");
+		System.out.println("veg biryani");
+		System.out.println("please select your menu");
+		menu1=sc.nextInt();
+		break;
+	default :
+		System.out.println("Please select your order properly");
+	}
+	if(menu==1) {
+	 if(menu1==1) {
+		System.out.println("your bill is : 200 ");
+		break;
+    	}
+	 else if(menu1==2) {
+		 System.out.println("Your bill is : 250");
+		 break;
+	 }
+	 else if(menu1==3) {
+		 System.out.println("your bill is : 200");
+		 break;
+	 }
+	}
+	else if(menu==2) {
+		 if(menu1==1) {
+				System.out.println("your bill is : 100 ");
+				break;
+		    	}
+			 else if(menu1==2) {
+				 System.out.println("Your bill is : 150");
+				 break;
+			 }
+			 else if(menu1==3) {
+				 System.out.println("your bill is : 100");
+				 break;
+			 }
+	}
+	else {
+        System.out.println("Thank you for visit ");
+	}
+	}
+	while(menu>0);
+}
+}
