@@ -1,0 +1,44 @@
+public interface India {
+public void europ_currency();
+public void china_currency();
+public void America_currency();
+}
+import java.util.*;
+ public class Main implements India{
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	public static void main(String[] args) {
+		System.out.println("enter the ruppes :");
+		Main m=new Main();
+		m.europ_currency();
+		m.china_currency();
+		m.America_currency();
+ }
+@Override
+public void europ_currency() {
+	double e=a*79.78;
+System.out.println("INR to EURO :"+e);	
+}
+
+@Override
+public void china_currency() {
+	double c=a*11.47;
+System.out.println("INR to YUAN :"+c);
+	
+}
+
+
+@Override
+public void china_currency() {
+	double c=a*11.47;
+System.out.println("INR to YUAN :"+c);
+	
+}
+
+@Override
+public void America_currency() {
+   double u=a*82.29;
+ System.out.println("INR to DOLLER :"+u);
+	
+}
+}
